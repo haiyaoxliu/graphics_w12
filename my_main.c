@@ -118,7 +118,7 @@ void first_pass() {
   appropriate value.
   ====================*/
 struct vary_node ** second_pass() {
-  struct vary_node ** knobs = calloc(num_frames, sizeof(struct vary_node));
+  struct vary_node ** knobs = (struct vary_node**)calloc(num_frames, sizeof(struct vary_node*));
   int i, k;
   int start, end, current_frame;
   double step;
